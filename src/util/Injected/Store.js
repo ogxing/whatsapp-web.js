@@ -49,8 +49,8 @@ exports.ExposeStore = () => {
     window.Store.WidToJid = window.require('WAWebWidToJid');
     window.Store.JidToWid = window.require('WAWebJidToWid');
     window.Store.getMsgInfo = window.require('WAWebApiMessageInfoStore').queryMsgInfo;
-    window.Store.pinUnpinMsg = window.require('WAWebSendPinMessageAction').sendPinInChatMsg;
-    window.Store.QueryExist = window.require('WAWebQueryExistsJob').queryWidExists;
+    // window.Store.pinUnpinMsg = window.require('WAWebSendPinMessageAction').sendPinInChatMsg;
+    window.Store.QueryExist = window.require('WAWebQueryExistsJob')?.queryWidExists;
     window.Store.ReplyUtils = window.require('WAWebMsgReply');
     window.Store.Settings = window.require('WAWebUserPrefsGeneral');
     

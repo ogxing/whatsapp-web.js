@@ -56,16 +56,16 @@ exports.ExposeLegacyStore = () => {
     window.Store.WidToJid = window.mR.findModule('widToUserJid')[0];
     window.Store.JidToWid = window.mR.findModule('userJidToUserWid')[0];
     window.Store.getMsgInfo = (window.mR.findModule('sendQueryMsgInfo')[0] || {}).sendQueryMsgInfo || window.mR.findModule('queryMsgInfo')[0].queryMsgInfo;
-    window.Store.pinUnpinMsg = window.mR.findModule('sendPinInChatMsg')[0].sendPinInChatMsg;
+    // window.Store.pinUnpinMsg = window.mR.findModule('sendPinInChatMsg')[0].sendPinInChatMsg;
     
     /* eslint-disable no-undef, no-cond-assign */
-    window.Store.QueryExist = ((m = window.mR.findModule('queryExists')[0]) ? m.queryExists : window.mR.findModule('queryExist')[0].queryWidExists);
+    window.Store.QueryExist = ((m = window.mR.findModule('queryExists')[0]) ? m.queryExists : window.mR.findModule('queryExist')[0]?.queryWidExists);
     window.Store.ReplyUtils = (m = window.mR.findModule('canReplyMsg')).length > 0 && m[0];
     /* eslint-enable no-undef, no-cond-assign */
 
     window.Store.Settings = {
         ...window.mR.findModule('ChatlistPanelState')[0],
-        setPushname: window.mR.findModule((m) => m.setPushname && !m.ChatlistPanelState)[0].setPushname
+        setPushname: window.mR.findModule((m) => m.setPushname && !m.ChatlistPanelState)[0]?.setPushname
     };
     window.Store.StickerTools = {
         ...window.mR.findModule('toWebpSticker')[0],
@@ -107,7 +107,7 @@ exports.ExposeLegacyStore = () => {
     if ((m = window.mR.findModule('ChatCollection')[0]) && m.ChatCollection && typeof m.ChatCollection.findImpl === 'undefined' && typeof m.ChatCollection._find !== 'undefined') m.ChatCollection.findImpl = m.ChatCollection._find;
 
     const _isMDBackend = window.mR.findModule('isMDBackend');
-    if(_isMDBackend && _isMDBackend[0] && _isMDBackend[0].isMDBackend) {
+    if(_isMDBackend && _isMDBackend[0] && _isMDBackend[0]?.isMDBackend) {
         window.Store.MDBackend = _isMDBackend[0].isMDBackend();
     } else {
         window.Store.MDBackend = true;
