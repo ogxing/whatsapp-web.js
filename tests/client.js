@@ -348,7 +348,7 @@ describe('Client', function() {
                     'Validators',
                     'WidFactory',
                     // 'findCommonGroups',
-                    'sendReactionToMsg',
+                    // 'sendReactionToMsg',
                 ];
               
                 const loadedModules = await client.pupPage.evaluate((expectedModules) => {

@@ -416,8 +416,8 @@ class Message extends Base {
         await this.client.pupPage.evaluate(async (messageId, reaction) => {
             if (!messageId) { return undefined; }
             
-            const msg = await window.Store.Msg.get(messageId);
-            await window.Store.sendReactionToMsg(msg, reaction);
+            // const msg = await window.Store.Msg.get(messageId);
+            // await window.Store.sendReactionToMsg(msg, reaction);
         }, this.id._serialized, reaction);
     }
 

@@ -35,7 +35,7 @@ exports.ExposeStore = () => {
     // window.Store.findCommonGroups = window.require('WAWebFindCommonGroupsContactAction').findCommonGroups;
     window.Store.StatusUtils = window.require('WAWebContactStatusBridge');
     window.Store.ConversationMsgs = window.require('WAWebChatLoadMessages');
-    window.Store.sendReactionToMsg = window.require('WAWebSendReactionMsgAction').sendReactionToMsg;
+    // window.Store.sendReactionToMsg = window.require('WAWebSendReactionMsgAction').sendReactionToMsg;
     window.Store.createOrUpdateReactionsModule = window.require('WAWebDBCreateOrUpdateReactions');
     window.Store.EphemeralFields = window.require('WAWebGetEphemeralFieldsMsgActionsUtils');
     window.Store.MsgActionChecks = window.require('WAWebMsgActionCapability');
