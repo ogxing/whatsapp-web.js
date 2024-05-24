@@ -39,7 +39,7 @@ exports.ExposeLegacyStore = () => {
     window.Store.ProfilePic = window.mR.findModule('profilePicResync')[0];
     window.Store.PresenceUtils = window.mR.findModule('sendPresenceAvailable')[0];
     window.Store.ChatState = window.mR.findModule('sendChatStateComposing')[0];
-    window.Store.findCommonGroups = window.mR.findModule('findCommonGroups')[0].findCommonGroups;
+    // window.Store.findCommonGroups = window.mR.findModule('findCommonGroups')[0].findCommonGroups;
     window.Store.StatusUtils = window.mR.findModule('setMyStatus')[0];
     window.Store.ConversationMsgs = window.mR.findModule('loadEarlierMsgs')[0];
     window.Store.sendReactionToMsg = window.mR.findModule('sendReactionToMsg')[0].sendReactionToMsg;

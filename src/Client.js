@@ -1241,10 +1241,10 @@ class Client extends EventEmitter {
             if (contact.commonGroups) {
                 return contact.commonGroups.serialize();
             }
-            const status = await window.Store.findCommonGroups(contact);
-            if (status) {
-                return contact.commonGroups.serialize();
-            }
+            // const status = await window.Store.findCommonGroups(contact);
+            // if (status) {
+            //     return contact.commonGroups.serialize();
+            // }
             return [];
         }, contactId);
         const chats = [];

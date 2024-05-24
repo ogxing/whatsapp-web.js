@@ -347,7 +347,7 @@ describe('Client', function() {
                     'VCard',
                     'Validators',
                     'WidFactory',
-                    'findCommonGroups',
+                    // 'findCommonGroups',
                     'sendReactionToMsg',
                 ];
               

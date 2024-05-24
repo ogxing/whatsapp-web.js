@@ -32,7 +32,7 @@ exports.ExposeStore = () => {
     window.Store.ProfilePic = window.require('WAWebContactProfilePicThumbBridge');
     window.Store.PresenceUtils = window.require('WAWebPresenceChatAction');
     window.Store.ChatState = window.require('WAWebChatStateBridge');
-    window.Store.findCommonGroups = window.require('WAWebFindCommonGroupsContactAction').findCommonGroups;
+    // window.Store.findCommonGroups = window.require('WAWebFindCommonGroupsContactAction').findCommonGroups;
     window.Store.StatusUtils = window.require('WAWebContactStatusBridge');
     window.Store.ConversationMsgs = window.require('WAWebChatLoadMessages');
     window.Store.sendReactionToMsg = window.require('WAWebSendReactionMsgAction').sendReactionToMsg;
